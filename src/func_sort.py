@@ -1,7 +1,7 @@
 def bubble_sort(sp: list[int]) -> list[int]:
     """Пузырьковая сортировка"""
     if not isinstance(sp, list):
-        raise TypeError('Аргумент должен быть списком')
+        raise TypeError("Аргумент должен быть списком")
     if not sp:
         return []
     arr = sp[:]  # копия списка
@@ -16,7 +16,7 @@ def bubble_sort(sp: list[int]) -> list[int]:
 def quick_sort(sp: list[int]) -> list[int]:
     """Быстрая сортировка"""
     if not isinstance(sp, list):
-        raise TypeError('Аргумент должен быть списком')
+        raise TypeError("Аргумент должен быть списком")
     if len(sp) <= 1:
         return sp[:]
     pivot = sp[len(sp) // 2]
@@ -29,7 +29,7 @@ def quick_sort(sp: list[int]) -> list[int]:
 def counting_sort(sp: list[int]) -> list[int]:
     """Сортировка подсчётом"""
     if not isinstance(sp, list):
-        raise TypeError('Аргумент должен быть списком')
+        raise TypeError("Аргумент должен быть списком")
     if not sp:
         return []
     min_val = min(sp)
@@ -46,11 +46,11 @@ def counting_sort(sp: list[int]) -> list[int]:
 def radix_sort(sp: list[int], base: int = 10) -> list[int]:
     """Поразрядная сортировка"""
     if not isinstance(sp, list):
-        raise TypeError('Аргумент должен быть списком')
+        raise TypeError("Аргумент должен быть списком")
     if not sp:
         return []
     if any(x < 0 for x in sp):
-        raise ValueError('radix_sort не поддерживает отрицательные числа')
+        raise ValueError("radix_sort не поддерживает отрицательные числа")
     arr = sp[:]
     max_val = max(arr)
     exp = 1
@@ -67,11 +67,11 @@ def radix_sort(sp: list[int], base: int = 10) -> list[int]:
 def bucket_sort(sp: list[float], buckets: int | None = None) -> list[float]:
     """Блочная сортировка для чисел в [0, 1)"""
     if not isinstance(sp, list):
-        raise TypeError('Аргумент должен быть списком')
+        raise TypeError("Аргумент должен быть списком")
     if not sp:
         return []
     if any(x < 0.0 or x >= 1.0 for x in sp):
-        raise ValueError('bucket_sort ожидает числа в диапазоне [0, 1)')
+        raise ValueError("bucket_sort ожидает числа в диапазоне [0, 1)")
     n = len(sp)
     if buckets is None:
         buckets = n
@@ -104,7 +104,7 @@ def _heapify(arr: list[int], n: int, i: int) -> None:
 def heap_sort(sp: list[int]) -> list[int]:
     """Пирамидальная сортировка"""
     if not isinstance(sp, list):
-        raise TypeError('Аргумент должен быть списком')
+        raise TypeError("Аргумент должен быть списком")
     if not sp:
         return []
     arr = sp[:]

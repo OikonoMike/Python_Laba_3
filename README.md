@@ -1,7 +1,29 @@
-# Лабораторная работа № 3
+# Лабораторная работа №3
 
-Реализован алгоритмический мини-пакет: факториал, Фибоначчи, 6 сортировок, стек и очередь.
+Реализован алгоритмический мини-пакет: факториал, числа Фибоначчи, шесть алгоритмов сортировки, стек и очередь.
 
+---
+
+### Архитектура проекта
+
+```
+Python_Laba_3/
+├── src/
+│   ├── __init__.py
+│   ├── factorial_and_fibo.py
+│   ├── func_sort.py
+│   └── data_structure.py
+├── tests/
+│   ├── __init__.py
+│   ├── test_factorial_and_fibo.py
+│   ├── test_func_sort.py
+│   └── test_data_structure.py
+├── pyproject.toml
+├── README.md
+├── .gitignore
+├── requirements.txt
+└── .pre-commit-config.yaml
+```
 ## Функции сортировок
 
 1. **Пузырьковая сортировка** (`bubble_sort`)
@@ -44,3 +66,19 @@
 - **Очередь** (`Queue`): поддерживает `enqueue`, `dequeue`, `front`
 
 Все структуры выбрасывают `IndexError` при операциях над пустой структурой.
+
+
+#### Запуск программы:
+1) Убедитесь, что Python >= 3.9
+2) Скопируйте репозиторий:
+```
+1) git clone https://github.com/OikonoMike/Python_Laba_3.git
+2) cd Python_Laba_3
+```
+3) Установите зависимости:
+```
+pip install -r requirements.txt
+```
+#### Тесты (58 штук):
+- Запуск тестов: `pytest`
+- (Опционально) Тесты с подробным выводом: `pytest -v`
